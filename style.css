@@ -1,4 +1,4 @@
-/* Nav Scss Document */
+/* Nav Css Document */
 header.top {
     padding-bottom: 5px;
 }
@@ -14,14 +14,6 @@ header.top {
    }
 }
 
-header.top .logo {
-    margin-top: 5px;
-}
-@media (min-width: 1200px) {
-    header.top .logo {
-        padding: 0;
-   }
-}
 @media (max-width: 992px) and (min-width: 768px) {
     header.top .logo {
         margin-top: 9px;
@@ -353,7 +345,7 @@ header.top .search-bar form button:hover {
     width: 24px;
     height: 24px;
     /* multiply by Kero from the Noun Project */
-    background: #fff url(images/close-menu.svg) no-repeat;
+    background: #fff url(images/https://raw.githubusercontent.com/solodev/top-navigation-search-bar/master/images/close-menu.svg) no-repeat;
     color: white;
     background-size: 100%;
 }
@@ -423,7 +415,6 @@ header.top .search-bar form button:hover {
     background-color: transparent;
     color: #fff;
     margin: 1.5rem 5rem 0 0;
-
 }
 
 .overlay .search-form .inp:hover {
@@ -473,96 +464,6 @@ header.top .search-bar form button:hover {
    }
 }
 
-@media (max-width: 992px) and (min-width: 768px) {
-    .overlay .mobile-menu ul li {
-        font-size: 2.8rem;
-        margin-bottom: 5px;
-   }
-}
-@media (max-width: 768px) {
-    .overlay .mobile-menu ul li {
-        margin-bottom: 5px;
-   }
-}
-
-@media (max-width: 768px) {
-    .overlay .mobile-menu-small {
-        margin-left: 23px;
-   }
-}
-.overlay .mobile-menu-small ul {
-    display: inline-block;
-    padding-right: 48px;
-}
-.overlay .mobile-menu-small ul:nth-of-type(2) {
-    padding-right: 0;
-}
-.overlay .mobile-menu-small ul li {
-    margin-bottom: 5px;
-}
-.overlay .mobile-menu-small ul li a {
-    font-size: 21px;
-    font-weight: 400;
-    color: #fff;
-}
-@media (max-width: 768px) {
-    .overlay .mobile-menu-small ul li a {
-        font-size: 14px;
-   }
-}
-.overlay .mobile-menu-small ul li a:hover {
-    text-decoration: none;
-}
-.overlay .box-social {
-    border-top: 1px solid rgba(120, 154, 185, 0.41);
-    margin-bottom: 50px;
-    margin-top: 45px;
-    display: inline-block;
-}
-@media (max-width: 768px) {
-    .overlay .box-social {
-        margin-bottom: 30px;
-   }
-}
-.overlay .box-social ul {
-    margin: 35px 0 0 0;
-    padding: 24px 0;
-}
-.overlay .box-social ul li {
-    float: left;
-    font-size: 36px;
-    font-size: 3.6rem;
-    line-height: 41px;
-    margin-right: 44px;
-}
-.overlay .box-social ul li:last-child {
-    margin-right: 0;
-}
-@media (max-width: 768px) {
-    .overlay .box-social ul li {
-        font-size: 26px;
-        font-size: 2.6rem;
-        margin-right: 35px;
-   }
-}
-.overlay .box-social ul li a {
-    color: #fff;
-}
-@media (max-width: 768px) {
-    .overlay .box-social ul li a {
-        font-size: 35px;
-   }
-}
-@media (min-width: 768px) {
-    .overlay .box-social ul li a .fa-facebook {
-        font-size: 43px;
-        margin-top: 1px;
-   }
-}
-.overlay .box-social ul li a:hover {
-    opacity: 0.7;
-}
-
 /* FontAwesome */
 
 .fas {
@@ -589,22 +490,15 @@ header.top .search-bar form button:hover {
 }
 
 .overlay .box-wrap {
-    max-width: 400px;
+max-width: 400px;
 }
 
 .nav-sidenav li.nav-item {
-    font-family: proxima-nova,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
     font-size: 1rem;
 }
 
 .bg-eerie-black {
     background-color: #1b1b1b;
-}
-
-.btn-primary {
-    color: #fff;
-    background-color: #d60e96;
-    border-color: #d60e96;
 }
 
 @media (min-width: 768px) {
