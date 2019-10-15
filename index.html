@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.7/js/min/perfect-scrollbar.jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <title>Top Navigation Search Bar</title>
+  </head>
+
+  <body>
+
+    <div class="overlay" id="overlay">
+      <div class="overlay-container">
+        <div class="box-wrap ps-container ps-theme-default z-index-max nav-sidenav bg-eerie-black" data-ps-id="c7505214-71ed-31a3-86fc-ffd7385b7d66">
+          <div class="d-flex align-items-center justify-content-between border-alpha2-white p-4">
+          </div>
+          <form class="search-form">
+            <div class="input-group" data-children-count="1">
+              <span class="input-group-btn"><button class="submit" type="submit" value="" data-children-count="0"><span class="input-group-btn"><i class="fas fa-search"></i></span></button></span> <input aria-label="Side Nav Search Input" class="inp" name="search" type="search" placeholder="What are you searching for?">
+            </div>
+          </form>
+          <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+            <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+          </div>
+          <div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;">
+            <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+          </div>
+        </div>
+      </div><!-- .overlay-container -->
+      <div class="close-container visible-xs">
+      
+               
+                        <a onclick="documentTrack('#');" class="" href="#"> </a>
+            
+       
+      </div><!-- .close-container -->
+    </div>
+
+    <header class="top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-10 col-xs-6 d-flex justify-content-end">
+            <div class="col-xl-3 col-lg-2 col-sm-4 col-5">
+              <a href="/">
+                <img alt="LunarXP Logo" class="img-fluid py-3" src="images/lunar-xp-logo.png" aria-role="logo">
+              </a>
+            </div>
+            <!-- .logo -->
+            <nav>
+              <ul class="topmenu nolist">
+                <li><a href="#">About</a>
+                </li>
+                <li><a href="#">Locations</a>
+                </li>
+                <li><a href="#">Products</a>
+                </li>
+                <li><a href="#">Shop</a>
+                </li>
+                <li><a href="#">Contact</a>
+                </li>
+                <li class="search">
+                  <a href="#">
+                    <img src="images/search.png" alt="" class="img-responsive">
+                  </a>
+                </li>
+
+              </ul>
+            </nav>
+            <button class="menu-hamburger"> <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="search-bar">
+              <form class="d-flex w-100 justify-content-center" method="GET">
+                <input class="search-input form-control" type="text" name="s" placeholder="What are you searching for?">
+                <button type="submit"><i class="fas fa-search"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- .header-content -->
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- .container -->
+    </header>
+
+    <script>
+      jQuery(document).ready(function($) {
+        // open & close search
+        $('header.top .topmenu li.search').on('click', 'a', function(e) {
+          $('.search-bar').fadeIn();
+          $('.menu-hamburger').fadeOut();
+          e.preventDefault();
+        });
+
+        $(document).mouseup(function(e) {
+          var container = $('.search-bar form');
+
+          if (!container.is(e.target) &&
+            container.has(e.target).length === 0) {
+            $('.search-bar').fadeOut();
+            $('.menu-hamburger').fadeIn();
+          }
+        });
+
+        // menu in sidebar
+        $('#overlay .box-wrap').perfectScrollbar();
+
+        $(document).on('click', '.menu-hamburger', function(e) {
+          if ($('.overlay').hasClass('open')) {
+            $('.overlay').removeClass('open');
+          } else {
+            $('.overlay').addClass('open');
+          }
+          e.preventDefault();
+        });
+
+        $(document).mouseup(function(e) {
+          var container = $('.box-wrap');
+
+          if (!container.is(e.target) &&
+            container.has(e.target).length === 0) {
+            $('.overlay').removeClass('open');
+          }
+        });
+      });
+
+    </script>
+  </body>
+
+</html>
