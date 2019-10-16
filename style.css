@@ -2,6 +2,7 @@
 
 header.top {
 	padding-bottom: 5px;
+	background-color: #f0f0f0;
 }
 @media (max-width: 768px) {
 	.overlay .search-form button {
@@ -9,11 +10,6 @@ header.top {
 		width: 30px;
 		font-size: 30px;
 		line-height: 30px;
-	}
-	.overlay .close-container {
-		height: 74px;
-		width: 74px;
-		right: 0;
 	}
 	.overlay .search-form .inp {
 		height: 45px;
@@ -229,15 +225,7 @@ header.top .search-bar form button {
 	.menu-hamburger {
 		display: none !important;
 	}
-}
-.menu-hamburger span {
-	width: 38px;
-	height: 5px;
-	background: #000;
-	display: block;
-	margin-top: 4px;
-}
-@media (max-width: 1200px) and (min-width: 992px) {
+
 	header.top .topmenu li.btn-menu a {
 		font-size: 20px;
 		height: 44px;
@@ -259,6 +247,14 @@ header.top .search-bar form button {
 		padding: 10px;
 	}
 }
+.menu-hamburger span {
+	width: 38px;
+	height: 5px;
+	background: #000;
+	display: block;
+	margin-top: 4px;
+}
+
 .menu-hamburger span + span {
 	margin-top: 7px;
 }
@@ -289,7 +285,7 @@ header.top .search-bar form button {
 }
 .overlay .box-wrap {
 	height: 100%;
-	padding: 50px 62px 30px 75px;
+	padding: 0.5rem 2rem 0.5rem 2rem;
 	float: right;
 }
 @media (max-width: 992px) {
@@ -307,13 +303,10 @@ header.top .search-bar form button {
 	}
 }
 .overlay .close-container {
-	width: 118px;
-	height: 136px;
 	position: absolute;
-	right: 0;
+	right: 2rem;
 	top: 0;
-	line-height: 78px;
-	color: #fff;
+	line-height: 4rem;	
 }
 .overlay .close-container a {
 	margin-top: 29px;
@@ -321,7 +314,7 @@ header.top .search-bar form button {
 	width: 24px;
 	height: 24px;
 	/* multiply by Kero from the Noun Project */
-	background: #fff url(images/https://raw.githubusercontent.com/solodev/top-navigation-search-bar/master/images/close-menu.svg) no-repeat;
+	background: url(images/https://raw.githubusercontent.com/solodev/top-navigation-search-bar/master/images/close-menu.svg) no-repeat;
 	color: white;
 	background-size: 100%;
 }
@@ -349,7 +342,7 @@ header.top .search-bar form button {
 }
 .overlay .search-form .inp {
 	width: 100%;
-	height: 64px;
+	height: 3rem;
 	border: 0;
 	padding: 0 15px;
 	font-size: 20px;
@@ -379,7 +372,7 @@ header.top .search-bar form button {
 	background: transparent;
 	color: #fff;
 	font-size: 40px;
-	font-size: 4rem;
+	font-size: 2rem;
 	border: none;
 }
 
@@ -393,6 +386,7 @@ header.top .search-bar form button {
 .nav-sidenav li.nav-item {
 	font-size: 1rem;
 }
+
 .bg-eerie-black {
 	background-color: #1b1b1b;
 }
@@ -403,8 +397,11 @@ header.top .search-bar form button {
 	font-style: normal;
 }
 .fa-search {
-	border: 1px solid #fff;
-	padding: 0.5rem 0.8rem;
-	color: #000;
-	background-color: #fff;
+    bottom: 0;
+    position: absolute;
+    right: 10%;
+}
+
+.fa-search, .fa-times, button {
+	cursor: pointer;
 }
