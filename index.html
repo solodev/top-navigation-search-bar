@@ -64,20 +64,19 @@
 
     <script>
       jQuery(document).ready(function($) {
-        // open & close search
+        // open search
         $('header.top .topmenu li.search').on('click', 'a', function(e) {
           $('.search-bar').fadeIn();
-          $('.menu-hamburger').fadeOut();
+          $('.topmenu').fadeOut();
           e.preventDefault();
         });
-
+        // close search
         $(document).mouseup(function(e) {
           var container = $('.search-bar form');
-
           if (!container.is(e.target) &&
             container.has(e.target).length === 0) {
             $('.search-bar').fadeOut();
-            $('.menu-hamburger').fadeIn();
+            $('.topmenu').fadeIn();
           }
         });
       });

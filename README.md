@@ -6,7 +6,7 @@ For detailed instruction's, view Solodev's [How to Create a Search Bar That Over
  
 ## Demo
   		  
-Try out a working example on [JSFiddle](https://jsfiddle.net/solodev/2yput4vh/9/).
+Try out a working example on [JSFiddle](https://jsfiddle.net/solodev/2yput4vh/10/).
 
 ## HTML
 
